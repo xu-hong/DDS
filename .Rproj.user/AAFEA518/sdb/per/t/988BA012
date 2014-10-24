@@ -1,0 +1,17 @@
+{
+    "contents" : "#simulate fake data \nx_1 <- rnorm(1000, 5, 7)\n\nhist(x_1, col=\"Grey\")\ntrue_error <- rnorm(1000, 0, 2)\ntrue_beta_0 <- 1.1\ntrue_beta_1 <- -8.2\ny <- true_beta_0 + true_beta_1*x_1 + true_error\nhist(y)\nplot(x_1, y, pch=20, col=\"red\")\n\n\n#build a linear regression model\nmodel <- lm(y ~ x_1)\ncoefs <- coef(model)\nabline(coefs[1], coefs[2])\n\n#add another variable\nx_2 <- rgamma(1000, 0.1)\ntrue_beta_2 <- 5\nyy <- true_beta_0 + true_beta_1*x_1 + true_beta_2*x_2 + true_error\n\n#\nmodel1 <- lm(yy~x_1)\nmodel2 <- lm(yy~x_2)\nmodel12 <- lm(y~x_1+x_2)\n",
+    "created" : 1412481739849.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1351667871",
+    "id" : "988BA012",
+    "lastKnownWriteTime" : 1412491744,
+    "path" : "~/Documents/Duke/Term 1 Courses/MOOC/DDS/Chap 3 LM.R",
+    "project_path" : "Chap 3 LM.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "setwd('/Users/xuhong/Documents/Duke/Term 1 Courses/MOOC/DDS/dds_datasets/dds_ch2_nyt')\ndata1 <- read.csv('nyt1.csv')\n\n# categorize\nhead(data1)\ndata1$agecat <- cut(data1$Age, breaks=c(-Inf, 0, 18, 24, 34, 44, 54, 64, Inf))\n\n\n# view\nsummary(data1)\n\n\n# brackets\ninstall.packages(\"doBy\")\nlibrary(\"doBy\")\n",
+    "created" : 1412310089486.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3673390948",
+    "id" : "419D0484",
+    "lastKnownWriteTime" : 1412311168,
+    "path" : "~/Documents/Duke/Term 1 Courses/MOOC/DDS/Chap2.R",
+    "project_path" : "Chap2.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
